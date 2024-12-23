@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Bite Bliss</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+    }
+
+    .navbar {
+      background-color: #333;
+      overflow: hidden;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .content, .section {
+      display: none;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .content.active, .section.active {
+      display: block;
+    }
+
+    .content h1 {
+      color: #333;
+    }
+
+    .content p {
+      color: #666;
+    }
+
+    .content img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    .footer a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('.content, .section').forEach(section => section.classList.remove('active'));
+      document.getElementById(sectionId).classList.add('active');
+    }
+  </script>
+</head>
+<body onload="showSection('home')">
+
+  <div class="navbar">
+    <div>
+      <img src="logo.jpg" alt="Bite Bliss Logo" style="height: 3rem; vertical-align: middle;">
+      <span style="color: white; font-size: 1.5rem; margin-left: 1rem;">Bite Bliss</span>
+    </div>
+    <div>
+      <a href="javascript:void(0)" onclick="showSection('home')">Home</a>
+      <a href="javascript:void(0)" onclick="showSection('about-us')">About Us</a>
+      <a href="javascript:void(0)" onclick="showSection('contact-us')">Contact Us</a>
+      <a href="javascript:void(0)" onclick="showSection('terms')">Terms & Conditions</a>
+      <a href="javascript:void(0)" onclick="showSection('privacy')">Privacy Policy</a>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <div class="content" id="home">
+    <h1>Wholesome & Flavorful Recipes for Every Meal</h1>
+    <p>Cook with Love, Serve with Joy</p>
+    <a href="#contact-us" style="color: #007bff; text-decoration: none; font-size: 1.2rem;">Get in Touch</a>
+
+    <h2>Delicious and Healthy, Just Like Home</h2>
+    <img src="meal.jpg" alt="Healthy Meal">
+    <p>Explore our collection of recipes for easy, healthy, and tasty meals made at home.</p>
+
+    <h2>Cooking Made Easy and Enjoyable</h2>
+    <p>Our easy-to-follow recipes focus on fresh ingredients to create meals that are as healthy as they are tasty. From hearty breakfasts to light dinners, Bite Bliss has everything you need to eat well and feel great.</p>
+
+    <h3>The Benefits of Cooking at Home</h3>
+    <p>Home-cooked meals allow you to control the ingredients and flavors. Use fresh, seasonal ingredients tailored to your dietary preferences for both nutritious and satisfying meals.</p>
+
+    <h3>Simple Tips for Healthy Cooking</h3>
+    <p>Plan ahead, use whole ingredients, and prepare meals in batches. Explore our 30-minute recipes for quick, healthy dishes you can enjoy every day of the week.</p>
+
+    <img src="meal_2.jpg" alt="Another Delicious Meal">
+    <img src="logo.jpg" alt="Third Delicious Meal">
+  </div>
+
+  <!-- About Us Section -->
+  <div class="section" id="about-us">
+    <h2>About Us</h2>
+    <p>Welcome to Bite Bliss, your go-to destination for wholesome and flavorful recipes that bring the joy of home-cooked meals to your table. Our mission is to inspire and empower you to create delicious dishes with fresh, nutritious ingredients, making healthy eating an enjoyable experience for everyone.</p>
+  </div>
+
+  <!-- Contact Us Section -->
+  <div class="section" id="contact-us">
+    <h2>Contact Us</h2>
+    <p>If you have any questions, suggestions, or just want to share your culinary creations with us, feel free to reach out. We'd love to hear from you!</p>
+    <p>Email: support@bitebliss.com</p>
+    <p>Phone: +1 (800) 123-4567</p>
+    <p>Address: 123 Culinary Lane, Foodie City, FC 12345</p>
+  </div>
+
+  <!-- Terms & Conditions Section -->
+  <div class="section" id="terms">
+    <h2>Terms & Conditions</h2>
+    <p>By accessing and using the Bite Bliss website, you agree to comply with the following terms and conditions:</p>
+    <ul>
+      <li>All content provided is for informational purposes only.</li>
+      <li>Unauthorized use of our content is prohibited.</li>
+      <li>We reserve the right to modify these terms at any time.</li>
+    </ul>
+  </div>
+
+  <!-- Privacy Policy Section -->
+  <div class="section" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>Your privacy is important to us. This policy outlines how we collect, use, and protect your personal information:</p>
+    <ul>
+      <li>We collect personal information only with your consent.</li>
+      <li>Your data is used solely to improve your experience on our site.</li>
+      <li>We do not share your information with third parties without your consent.</li>
+    </ul>
+  </div>
+
+  <div class="footer">
+    <p>
+      <a href="javascript:void(0)" onclick="showSection('about-us')">About Us</a>
+      <a href="javascript:void(0)" onclick="showSection('privacy')">Privacy Policy</a>
+      <a href="javascript:void(0)" onclick="showSection('contact-us')">Contact Us</a>
+      <a href="javascript:void(0)" onclick="showSection('terms')">Terms & Conditions</a>
+    </p>
+    <p>&copy; 2024 Bite Bliss. All Rights Reserved</p>
+  </div>
+
+</body>
+</html>
